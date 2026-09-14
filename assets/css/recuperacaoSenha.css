@@ -1,0 +1,20 @@
+#forgot-password button[type=submit],
+#reset-password button[type=submit] {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  border-radius: 4px;
+  padding: 10px 30px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--accent-color), transparent 65%);
+}
+
+#forgot-password button[type=submit]:hover,
+#forgot-password button[type=submit]:focus,
+#reset-password button[type=submit]:hover,
+#reset-password button[type=submit]:focus {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--accent-color), transparent 50%);
+  transform: translateY(-1px);
+}

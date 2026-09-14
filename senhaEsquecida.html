@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Entrar | AstralMindHelp</title>
-  <meta name="description" content="Entre na sua conta AstralMindHelp.">
+  <title>Recuperar senha | AstralMindHelp</title>
+  <meta name="description" content="Solicite um link para redefinir sua senha na AstralMindHelp.">
 
   <link href="assets/img/favicon.png" rel="icon">
   <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,10 +17,10 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/estilo.css" rel="stylesheet">
+  <link href="assets/css/recuperacaoSenha.css" rel="stylesheet">
 </head>
 
 <body class="contact-page">
-
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
       <a href="index.html" class="logo d-flex align-items-center me-auto">
@@ -50,43 +50,39 @@
   <main class="main">
     <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/fundo.jpg);">
       <div class="container position-relative">
-        <h1>Entrar</h1>
-        <p>Acesse sua conta para continuar na AstralMindHelp.</p>
+        <h1>Recuperar senha</h1>
+        <p>Informe seus dados para receber um link de redefinição.</p>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Início</a></li>
-            <li class="current">Entrar</li>
+            <li><a href="login.html">Entrar</a></li>
+            <li class="current">Recuperar senha</li>
           </ol>
         </nav>
       </div>
     </div>
 
-    <section id="login" class="contact section">
+    <section id="forgot-password" class="contact section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
           <div class="col-lg-6 col-md-8 mx-auto">
-            <form action="#" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="redefinirSenha.html" method="get" data-aos="fade-up" data-aos-delay="200">
               <div class="row g-3">
                 <div class="col-12">
-                  <label for="email" class="form-label">E-mail</label>
-                  <input type="email" id="email" name="email" class="form-control" placeholder="voce@exemplo.com" autocomplete="email" required>
+                  <p class="mb-0">Digite seu e-mail ou número de celular. Enviaremos um link via e-mail para você redefinir sua senha com segurança.</p>
                 </div>
 
                 <div class="col-12">
-                  <label for="password" class="form-label">Senha</label>
-                  <input type="password" id="password" name="password" class="form-control" placeholder="Digite sua senha" autocomplete="current-password" required>
-                </div>
-
-                <div class="col-12 text-end">
-                  <a href="senhaEsquecida.html" class="small">Esqueci minha senha</a>
+                  <label for="account-identifier" class="form-label">E-mail ou número de celular</label>
+                  <input type="text" id="account-identifier" name="identifier" class="form-control" placeholder="voce@exemplo.com ou (00) 00000-0000" autocomplete="username" required>
                 </div>
 
                 <div class="col-12 text-center">
-                  <button type="submit">Entrar</button>
+                  <button type="submit">Enviar link</button>
                 </div>
 
                 <div class="col-12 text-center">
-                  <p class="mb-0">Ainda não tem uma conta? <a href="Cadastro.html">Cadastre-se</a></p>
+                  <a href="login.html">Voltar para o login</a>
                 </div>
               </div>
             </form>

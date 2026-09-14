@@ -1,0 +1,20 @@
+#booking .login-link {
+  min-height: 38px;
+  padding: 0.375rem 0.5rem;
+  line-height: 1.25;
+  white-space: normal;
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--accent-color), transparent 65%);
+  transition: 0.3s ease;
+}
+
+#booking .login-link:hover,
+#booking .login-link:focus {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), black 12%);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--accent-color), transparent 50%);
+  transform: translateY(-1px);
+}
