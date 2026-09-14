@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Cadastre-se</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/estilo.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Logis
+  * Template URL: https://bootstrapmade.com/logis-bootstrap-logistics-website-template/
+  * Updated: Apr 08 2026 with Bootstrap v5.3.8
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="contact-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">AstralMindHelp</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="about.html">Sobre</a></li>
+          <li><a href="services.html">Serviços</a></li>
+          <li><a href="pricing.html">Preços</a></li>
+          <li><a href="contact.html">Contato</a></li>
+          <li><a href="Agendamento.html">Agendamento</a></li>
+          <li class="dropdown"><a class="btn-getstarted" href="#"><span>Acesso</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="login.html">Entrar</a></li>
+              <li><a class="active" href="Cadastro.html">Cadastrar-se</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/fundo.jpg);">
+      <div class="container position-relative">
+        <h1>Cadastro</h1>
+        <p>Cadastre-se para entrar em contato com os profissionais, caso você seja um profissional, venha oferecer seus serviços.</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Início</a></li>
+            <li class="current">Cadastro</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Registration Section -->
+    <section id="contact" class="contact section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8 mx-auto">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row g-3">
+
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Nome completo</label>
+                  <input type="text" id="name" name="name" class="form-control" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="email" id="email" class="form-control" name="email" placeholder="voce@exemplo.com" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">Número de celular</label>
+                  <input type="tel" id="phone" class="form-control" name="phone" placeholder="(00) 00000-0000" required>
+                </div>
+
+                <div class="col-12">
+                  <div class="row g-3">
+                    <div class="col-md-4">
+                      <label for="cep" class="form-label">CEP</label>
+                      <div class="input-group">
+                        <input type="text" id="cep" class="form-control" name="cep" inputmode="numeric" maxlength="9" placeholder="00000-000" required>
+                        <button type="button" id="search-cep" class="btn btn-outline-primary">Buscar</button>
+                      </div>
+                      <div id="cep-feedback" class="form-text" aria-live="polite"></div>
+                    </div>
+
+                    <div class="col-md-8">
+                      <label for="street" class="form-label">Rua</label>
+                      <input type="text" id="street" class="form-control" name="street" placeholder="Nome da rua" required>
+                    </div>
+
+                    <div class="col-md-4">
+                      <label for="number" class="form-label">Número</label>
+                      <input type="text" id="number" class="form-control" name="number" placeholder="Número" required>
+                    </div>
+
+                    <div class="col-md-4">
+                      <label for="complement" class="form-label">Complemento</label>
+                      <input type="text" id="complement" class="form-control" name="complement" placeholder="Apto, sala...">
+                    </div>
+
+                    <div class="col-md-4">
+                      <label for="neighborhood" class="form-label">Bairro</label>
+                      <input type="text" id="neighborhood" class="form-control" name="neighborhood" placeholder="Bairro" required>
+                    </div>
+
+                    <div class="col-md-8">
+                      <label for="city" class="form-label">Cidade</label>
+                      <input type="text" id="city" class="form-control" name="city" placeholder="Cidade" required>
+                    </div>
+
+                    <div class="col-md-4">
+                      <label for="state" class="form-label">UF</label>
+                      <select id="state" class="form-select" name="state" required>
+                        <option value="" selected disabled>Selecione</option>
+                        <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+                        <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+                        <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+                        <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+                        <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+                        <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+                        <option>SP</option><option>SE</option><option>TO</option>
+                      </select>
+                    </div>
+
+                    <div class="col-12">
+                      <button type="button" id="search-address" class="btn btn-link p-0">Encontrar CEP pelo endereço</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <label for="account-type" class="form-label">Como você usará a AstralMindHelp?</label>
+                  <select id="account-type" name="account_type" class="form-select" required>
+                    <option value="" selected disabled>Selecione uma opção</option>
+                    <option value="patient">Estou procurando um profissional</option>
+                    <option value="professional">Sou um profissional</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <div id="professional-fields" class="row g-3 d-none">
+                    <div class="col-md-6">
+                      <label for="profession" class="form-label">Profissão</label>
+                      <select id="profession" class="form-select" name="profession">
+                        <option value="" selected disabled>Selecione sua profissão</option>
+                        <option value="psychologist">Psicólogo(a)</option>
+                        <option value="doctor">Médico(a)</option>
+                        <option value="physiotherapist">Fisioterapeuta</option>
+                        <option value="nutritionist">Nutricionista</option>
+                        <option value="other">Outra profissão da saúde</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label id="professional-registration-label" for="professional-registration" class="form-label">Registro profissional</label>
+                      <input type="text" id="professional-registration" class="form-control" name="professional_registration" placeholder="Número do registro">
+                    </div>
+
+                    <div class="col-md-4">
+                      <label for="professional-registration-state" class="form-label">UF do registro</label>
+                      <select id="professional-registration-state" class="form-select" name="professional_registration_state">
+                        <option value="" selected disabled>Selecione</option>
+                        <option>AC</option><option>AL</option><option>AP</option><option>AM</option>
+                        <option>BA</option><option>CE</option><option>DF</option><option>ES</option>
+                        <option>GO</option><option>MA</option><option>MT</option><option>MS</option>
+                        <option>MG</option><option>PA</option><option>PB</option><option>PR</option>
+                        <option>PE</option><option>PI</option><option>RJ</option><option>RN</option>
+                        <option>RS</option><option>RO</option><option>RR</option><option>SC</option>
+                        <option>SP</option><option>SE</option><option>TO</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-8">
+                      <label for="specialty" class="form-label">Especialidade ou área de atuação</label>
+                      <input type="text" id="specialty" class="form-control" name="specialty" placeholder="Ex.: Psicologia clínica">
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="therapeutic-approach" class="form-label">Abordagem ou linha de trabalho</label>
+                      <input type="text" id="therapeutic-approach" class="form-control" name="therapeutic_approach" placeholder="Ex.: TCC, psicanálise">
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="service-modality" class="form-label">Modalidade de atendimento</label>
+                      <select id="service-modality" class="form-select" name="service_modality">
+                        <option value="" selected disabled>Selecione uma modalidade</option>
+                        <option value="online">Online</option>
+                        <option value="in-person">Presencial</option>
+                        <option value="both">Online e presencial</option>
+                      </select>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="professional-bio" class="form-label">Apresentação profissional</label>
+                      <textarea id="professional-bio" class="form-control" name="professional_bio" rows="4" placeholder="Conte brevemente sobre sua experiência e como você trabalha."></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="password" class="form-label">Criar senha</label>
+                  <input type="password" id="password" class="form-control" name="password" minlength="8" placeholder="Mínimo de 8 caracteres" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="password-confirmation" class="form-label">Confirmar senha</label>
+                  <input type="password" id="password-confirmation" class="form-control" name="password_confirmation" minlength="8" placeholder="Repita sua senha" required>
+                </div>
+
+                <div class="col-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Cadastro realizado com sucesso!</div>
+
+                  <button type="submit">Criar cadastro</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer dark-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Logis</span>
+          </a>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>A108 Adam Street</p>
+          <p>New York, NY 535022</p>
+          <p>United States</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+          <p><strong>Email:</strong> <span>info@example.com</span></p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Logis</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/integracaoCep.js"></script>
+  <script src="assets/js/cadastro.js"></script>
+
+</body>
+
+</html>

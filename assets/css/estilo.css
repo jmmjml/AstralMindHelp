@@ -1,0 +1,15 @@
+@media (min-width: 1200px) {
+  .navmenu .dropdown > a.btn-getstarted {
+    margin: 0 15px;
+    padding: 8px 25px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navmenu .dropdown > a.btn-getstarted {
+    margin: 10px auto;
+    padding: 10px 20px;
+    justify-content: center;
+    width: fit-content;
+  }
+}
