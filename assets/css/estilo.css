@@ -13,3 +13,49 @@
     width: fit-content;
   }
 }
+
+.contact-hero {
+  overflow: hidden;
+  background-image: none;
+}
+
+.contact-hero .page-title-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.contact-hero::before {
+  z-index: 1;
+}
+
+.contact-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.blog-hero {
+  overflow: hidden;
+  background-image: none;
+}
+
+.blog-hero .page-title-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.blog-hero::before {
+  z-index: 1;
+}
+
+.blog-hero .container {
+  position: relative;
+  z-index: 2;
+}
