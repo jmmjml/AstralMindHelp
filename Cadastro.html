@@ -52,8 +52,9 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Início</a></li>
-          <li><a href="about.html">Sobre</a></li>
-          <li><a href="services.html">Serviços</a></li>
+          <li><a href="index.html#about">Sobre</a></li>
+          <li><a href="PerfilVoluntarios.html">Voluntários</a></li>
+          <li><a href="Faq.html">FAQ</a></li>
           <li><a href="blog.html">Artigos</a></li>
           <li><a href="contato_suporte.html">Contato</a></li>
           <li><a href="Agendamento.html">Agendamento</a></li>
@@ -94,7 +95,7 @@
         <div class="row gy-4">
 
           <div class="col-lg-8 mx-auto">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form id="registration-form" action="#" method="post" data-aos="fade-up" data-aos-delay="200">
               <div class="row g-3">
 
                 <div class="col-md-6">
@@ -105,6 +106,13 @@
                 <div class="col-md-6">
                   <label for="email" class="form-label">E-mail</label>
                   <input type="email" id="email" class="form-control" name="email" placeholder="voce@exemplo.com" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="profile-image" class="form-label">Imagem de perfil</label>
+                  <input type="file" id="profile-image" class="form-control" name="profile_image" accept="image/*">
+                  <div class="form-text">Escolha uma imagem JPG, PNG ou WEBP de até 2 MB.</div>
+                  <img id="profile-image-preview" class="d-none mt-3 rounded-circle object-fit-cover" width="120" height="120" alt="Prévia da imagem de perfil">
                 </div>
 
                 <div class="col-md-6">
@@ -288,8 +296,9 @@
           <h4>Links úteis</h4>
           <ul>
             <li><a href="index.html">Início</a></li>
-            <li><a href="about.html">Sobre</a></li>
-            <li><a href="services.html">Serviços</a></li>
+            <li><a href="index.html#about">Sobre</a></li>
+            <li><a href="PerfilVoluntarios.html">Voluntários</a></li>
+            <li><a href="Faq.html">FAQ</a></li>
             <li><a href="Agendamento.html">Agendamento</a></li>
             <li><a href="contato_suporte.html">Contato</a></li>
           </ul>
@@ -342,6 +351,7 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/integracaoCep.js"></script>
   <script src="assets/js/cadastro.js"></script>
+  <script src="assets/js/previewImagem.js"></script>
 
 </body>
 

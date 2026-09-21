@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voluntários - AstralMindHelp</title>
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/estilo.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #0d6efd;
+      --primary-hover: #0b5ed7;
+      --dark-color: #1e293b;
+      --light-bg: #f8fafc;
+      --border-color: #e2e8f0;
+      --footer-bg: #0b1727;
+    }
+
+    body {
+      font-family: var(--default-font);
+      background-color: var(--background-color);
+      color: var(--default-color);
+      padding-top: 0;
+    }
+
+    .volunteer-card {
+      border: none;
+      border-radius: 16px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .volunteer-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .avatar-img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #eff6ff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .badge-specialty {
+      background-color: #f1f5f9;
+      color: #334155;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.35em 0.7em;
+      border-radius: 20px;
+      margin-right: 4px;
+      margin-bottom: 4px;
+      display: inline-block;
+    }
+
+    .btn-custom {
+      background-color: var(--primary-color);
+      color: #ffffff;
+      font-weight: 600;
+      border-radius: 8px;
+      padding: 0.5rem 1.25rem;
+      border: none;
+    }
+
+    .btn-custom:hover {
+      background-color: var(--primary-hover);
+      color: #ffffff;
+    }
+
+    /* Estilização do Rodapé */
+    footer {
+      background-color: var(--footer-bg);
+      color: #94a3b8;
+      padding-top: 4rem;
+      padding-bottom: 2rem;
+      margin-top: 5rem;
+      position: relative;
+    }
+
+    footer h5 {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    footer a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+
+    .social-icon {
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      transition: all 0.2s ease;
+    }
+
+    .social-icon:hover {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      color: #ffffff;
+    }
+
+    .btn-scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 42px;
+      height: 42px;
+      background-color: var(--primary-color);
+      color: #ffffff;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+
+    .btn-scroll-top:hover {
+      background-color: var(--primary-hover);
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <h1 class="sitename">AstralMindHelp</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html#about">Sobre</a></li>
+          <li><a href="PerfilVoluntarios.html" class="active">Voluntários</a></li>
+          <li><a href="Faq.html">FAQ</a></li>
+          <li><a href="blog.html">Artigos</a></li>
+          <li><a href="contato_suporte.html">Contato</a></li>
+          <li><a href="Agendamento.html">Agendamento</a></li>
+          <li class="dropdown"><a class="btn-getstarted" href="#"><span>Acesso</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="login.html">Entrar</a></li>
+              <li><a href="Cadastro.html">Cadastrar-se</a></li>
+            </ul>
+          </li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-title dark-background blog-hero">
+      <img src="assets/img/fundo.jpg" alt="" class="page-title-bg">
+      <div class="container position-relative">
+        <h1>Equipe de Voluntários</h1>
+        <p>Profissionais e grupos prontos para oferecer apoio e acolhimento.</p>
+      </div>
+    </div>
+
+  <section class="container my-5">
+    <div class="row g-4">
+
+      <div class="col-md-6">
+        <div class="volunteer-card p-4 d-flex flex-column flex-sm-row gap-4 align-items-center align-items-sm-start">
+          <img src="assets/img/about.jpg" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300'" alt="Dra. Ana Silva" class="avatar-img">
+          <div class="flex-grow-1 text-center text-sm-start">
+            <h5 class="fw-bold mb-1">Dra. Ana Silva</h5>
+            <p class="text-primary small fw-semibold mb-2">Psicóloga Clínica • CRP 06/123456</p>
+            <div class="mb-3">
+              <span class="badge-specialty">TCC</span>
+              <span class="badge-specialty">Ansiedade</span>
+              <span class="badge-specialty">Depressão</span>
+            </div>
+            <p class="small text-muted mb-3"><i class="fa-regular fa-clock me-1 text-primary"></i> Terças e Quintas, 14h às 18h</p>
+            <a href="Agendamento.html" class="btn btn-custom btn-sm w-100 w-sm-auto">Agendar Consulta</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="volunteer-card p-4 d-flex flex-column flex-sm-row gap-4 align-items-center align-items-sm-start">
+          <img src="assets/img/autocuidado.jpg" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300'" alt="Carlos Eduardo Santos" class="avatar-img">
+          <div class="flex-grow-1 text-center text-sm-start">
+            <h5 class="fw-bold mb-1">Carlos Eduardo Santos</h5>
+            <p class="text-primary small fw-semibold mb-2">Terapeuta Holístico & Escuta Ativa</p>
+            <div class="mb-3">
+              <span class="badge-specialty">Gestão do Estresse</span>
+              <span class="badge-specialty">Mindfulness</span>
+            </div>
+            <p class="small text-muted mb-3"><i class="fa-regular fa-clock me-1 text-primary"></i> Segundas e Quartas, 09h às 12h</p>
+            <a href="Agendamento.html" class="btn btn-custom btn-sm w-100 w-sm-auto">Agendar Consulta</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="volunteer-card p-4 d-flex flex-column flex-sm-row gap-4 align-items-center align-items-sm-start">
+          <img src="assets/img/apoio.jpg" onerror="this.src='https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=300'" alt="Grupo Acolher & Falar" class="avatar-img">
+          <div class="flex-grow-1 text-center text-sm-start">
+            <h5 class="fw-bold mb-1">Grupo Acolher & Falar</h5>
+            <p class="text-primary small fw-semibold mb-2">Grupo de Apoio Emocional Coletivo</p>
+            <div class="mb-3">
+              <span class="badge-specialty">Partilha de Experiências</span>
+              <span class="badge-specialty">Luto</span>
+            </div>
+            <p class="small text-muted mb-3"><i class="fa-regular fa-clock me-1 text-primary"></i> Sábados, às 10h</p>
+            <a href="Agendamento.html" class="btn btn-custom btn-sm w-100 w-sm-auto">Participar do Grupo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="volunteer-card p-4 d-flex flex-column flex-sm-row gap-4 align-items-center align-items-sm-start">
+          <img src="assets/img/ansiedade.jpg" onerror="this.src='https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=300'" alt="Dr. Roberto Lima" class="avatar-img">
+          <div class="flex-grow-1 text-center text-sm-start">
+            <h5 class="fw-bold mb-1">Dr. Roberto Lima</h5>
+            <p class="text-primary small fw-semibold mb-2">Psicólogo • CRP 06/654321</p>
+            <div class="mb-3">
+              <span class="badge-specialty">Jovens e Adultos</span>
+              <span class="badge-specialty">Autoconhecimento</span>
+            </div>
+            <p class="small text-muted mb-3"><i class="fa-regular fa-clock me-1 text-primary"></i> Sextas-feiras, 13h às 17h</p>
+            <a href="Agendamento.html" class="btn btn-custom btn-sm w-100 w-sm-auto">Agendar Consulta</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  </main>
+
+  <!-- Rodapé Unificado -->
+  <footer>
+    <div class="container">
+      <div class="row g-4 mb-4">
+        
+        <!-- Coluna Sobre -->
+        <div class="col-lg-5 pe-lg-5">
+          <h3 class="text-white fw-bold mb-3">AstralMindHelp</h3>
+          <p class="small mb-4">Um projeto voltado à conexão entre pessoas que buscam apoio emocional e uma rede de voluntários, profissionais e grupos de apoio.</p>
+          <div class="d-flex gap-2">
+            <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+
+        <!-- Coluna Links Úteis -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Links úteis</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="index.html#about">Sobre</a></li>
+            <li><a href="PerfilVoluntarios.html">Voluntários</a></li>
+            <li><a href="Faq.html">FAQ</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna Recursos -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Recursos</h5>
+          <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+            <li><a href="PerfilVoluntarios.html">Voluntários</a></li>
+            <li><a href="Agendamento.html">Agendamento</a></li>
+            <li><a href="blog.html">Artigos</a></li>
+            <li><a href="Cadastro.html">Cadastro</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna Contato -->
+        <div class="col-md-6 col-lg-3">
+          <h5>Contato</h5>
+          <p class="small mb-2"><strong class="text-white">E-mail:</strong> contato@astralmindhelp.com</p>
+          <p class="small mb-0"><strong class="text-white">Suporte:</strong> Entre em contato pelo formulário do site</p>
+        </div>
+
+      </div>
+
+      <hr style="border-color: rgba(255, 255, 255, 0.1);" class="my-4">
+
+      <div class="text-center small">
+        <p class="mb-1">&copy; 2026 <strong class="text-white">Astral Mind Help</strong> Todos os direitos reservados</p>
+        <p class="mb-0 text-muted">Projeto acadêmico desenvolvido para apoio à saúde mental.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão Voltar ao Topo -->
+  <a href="#" class="btn-scroll-top"><i class="fa-solid fa-arrow-up"></i></a>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

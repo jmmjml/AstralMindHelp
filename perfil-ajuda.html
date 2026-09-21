@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu perfil | AstralMindHelp</title>
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/estilo.css" rel="stylesheet">
+  <link href="assets/css/perfil.css" rel="stylesheet">
+</head>
+<body class="index-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center me-auto"><h1 class="sitename">AstralMindHelp</h1></a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="index.html#about">Sobre</a></li>
+          <li><a href="PerfilVoluntarios.html">Voluntários</a></li>
+          <li><a href="Faq.html">FAQ</a></li>
+          <li><a href="blog.html">Artigos</a></li>
+          <li><a href="contato_suporte.html">Contato</a></li>
+          <li><a href="Agendamento.html">Agendamento</a></li>
+          <li><a href="perfil-ajuda.html" class="active">Meu perfil</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-title dark-background blog-hero">
+      <img src="assets/img/fundo.jpg" alt="" class="page-title-bg">
+      <div class="container position-relative">
+        <h1>Meu perfil</h1>
+        <p>Confira e atualize seus dados para encontrar apoio com mais facilidade.</p>
+      </div>
+    </div>
+
+    <section class="section light-background">
+      <div class="container">
+        <div class="row gy-4 align-items-start">
+          <div class="col-lg-4">
+            <div class="profile-card rounded-4 p-4 text-center">
+              <img class="profile-avatar rounded-circle mb-3" src="assets/img/pessoa_refletindo.jpg" alt="Mariana Oliveira">
+              <h2 class="h3" data-profile="name">Mariana Oliveira</h2>
+              <p class="mb-4">Pessoa em busca de apoio</p>
+              <div class="text-start border-top border-light border-opacity-25 pt-3">
+                <div class="profile-label">E-mail</div>
+                <div data-profile="email">mariana.oliveira@exemplo.com</div>
+                <div class="profile-label mt-3">Cidade</div>
+                <div data-profile="city">Presidente Prudente</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <form class="profile-form rounded-4 p-4 p-lg-5" data-profile-form>
+              <div class="d-flex justify-content-between align-items-center gap-3 mb-4">
+                <div><span class="text-primary fw-semibold">Dados da conta</span><h2 class="h3 mb-0">Editar perfil</h2></div>
+                <i class="bi bi-person-circle fs-2 text-primary" aria-hidden="true"></i>
+              </div>
+              <div class="row g-3">
+                <div class="col-md-6"><label class="form-label" for="profile-name">Nome completo</label><input class="form-control" id="profile-name" name="name" required></div>
+                <div class="col-md-6"><label class="form-label" for="profile-email">E-mail</label><input class="form-control" id="profile-email" name="email" type="email" required></div>
+                <div class="col-md-6"><label class="form-label" for="profile-phone">Celular</label><input class="form-control" id="profile-phone" name="phone" type="tel"></div>
+                <div class="col-md-6"><label class="form-label" for="profile-image">Imagem de perfil</label><input class="form-control" id="profile-image" name="profile_image" type="file" accept="image/*"></div>
+                <div class="col-12"><img id="profile-image-preview" class="d-none rounded-circle object-fit-cover" width="96" height="96" alt="Prévia da nova imagem"></div>
+                <div class="col-md-8"><label class="form-label" for="profile-street">Rua</label><input class="form-control" id="profile-street" name="street"></div>
+                <div class="col-md-4"><label class="form-label" for="profile-number">Número</label><input class="form-control" id="profile-number" name="number"></div>
+                <div class="col-md-4"><label class="form-label" for="profile-neighborhood">Bairro</label><input class="form-control" id="profile-neighborhood" name="neighborhood"></div>
+                <div class="col-md-5"><label class="form-label" for="profile-city">Cidade</label><input class="form-control" id="profile-city" name="city"></div>
+                <div class="col-md-3"><label class="form-label" for="profile-state">UF</label><input class="form-control" id="profile-state" name="state" maxlength="2"></div>
+                <div class="col-12"><label class="form-label" for="profile-complement">Complemento</label><input class="form-control" id="profile-complement" name="complement"></div>
+                <div class="col-12 d-flex flex-wrap align-items-center gap-3 mt-4"><button class="btn btn-primary" type="submit"><i class="bi bi-check2 me-2"></i>Salvar alterações</button><span class="profile-status" aria-live="polite"></span></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer dark-background"><div class="container copyright text-center mt-4"><p>© 2026 <strong class="px-1 sitename">AstralMindHelp</strong> Todos os direitos reservados</p></div></footer>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/previewImagem.js"></script>
+  <script src="assets/js/conta.js"></script>
+</body>
+</html>

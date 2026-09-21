@@ -1,0 +1,46 @@
+.profile-avatar {
+  width: 136px;
+  height: 136px;
+  object-fit: cover;
+  border: 5px solid #e8efff;
+}
+
+.profile-card,
+.profile-form {
+  border: 0;
+  box-shadow: 0 10px 30px rgba(14, 29, 52, 0.08);
+}
+
+.profile-card {
+  background: linear-gradient(145deg, #0e1d34, #19335c);
+  color: #ffffff;
+}
+
+.profile-card h2,
+.profile-card p {
+  color: #ffffff;
+}
+
+.profile-card .profile-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.profile-form {
+  background: #ffffff;
+}
+
+.profile-form .form-control,
+.profile-form .form-select {
+  min-height: 48px;
+}
+
+.profile-form textarea.form-control {
+  min-height: 120px;
+}
+
+.profile-status {
+  min-height: 24px;
+}
