@@ -32,14 +32,14 @@
     };
   };
   const readFile = file => new Promise((resolve, reject) => {
-    if (!file) {
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    } else {
       resolve('');
-      return;
     }
-    const reader = new FileReader();
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
   });
 
   const registrationForm = document.querySelector('#registration-form') || document.querySelector('form[action="forms/contact.php"]');
@@ -49,20 +49,19 @@
       const formData = new FormData(registrationForm);
       const password = formData.get('password');
       const confirmation = formData.get('password_confirmation');
-      if (password !== confirmation) {
+      if (password === confirmation) {
+        const profile = Object.fromEntries(formData.entries());
+        profile.accountType = formData.get('account_type');
+        const imageInput = document.querySelector('#profile-image');
+        profile.image = await readFile(imageInput && imageInput.files[0]);
+        delete profile.password;
+        delete profile.password_confirmation;
+        delete profile.profile_image;
+        saveProfile(profile);
+        window.location.href = profile.accountType === 'professional' ? 'perfil-profissional.html' : 'perfil-ajuda.html';
+      } else {
         window.alert('As senhas precisam ser iguais.');
-        return;
       }
-
-      const profile = Object.fromEntries(formData.entries());
-      profile.accountType = formData.get('account_type');
-      const imageInput = document.querySelector('#profile-image');
-      profile.image = await readFile(imageInput && imageInput.files[0]);
-      delete profile.password;
-      delete profile.password_confirmation;
-      delete profile.profile_image;
-      saveProfile(profile);
-      window.location.href = profile.accountType === 'professional' ? 'perfil-profissional.html' : 'perfil-ajuda.html';
     });
   }
 
@@ -73,18 +72,20 @@
       const profile = getProfile();
       const email = loginForm.querySelector('[name="email"]').value.trim().toLowerCase();
       const feedback = document.querySelector('#login-feedback');
-      if (profile && profile.email && profile.email.toLowerCase() !== email) {
+      if (profile && profile.email && profile.email.toLowerCase() === email) {
+        window.location.href = profile.accountType === 'professional' ? 'perfil-profissional.html' : 'perfil-ajuda.html';
+      } else if (!profile || !profile.email) {
+        window.location.href = 'perfil-ajuda.html';
+      } else {
         feedback.textContent = 'Este e-mail não corresponde ao cadastro salvo neste navegador.';
         feedback.className = 'form-text text-center text-danger';
-        return;
       }
-      window.location.href = profile && profile.accountType === 'professional' ? 'perfil-profissional.html' : 'perfil-ajuda.html';
     });
   }
 
   const profileForm = document.querySelector('[data-profile-form]');
-  if (!profileForm) return;
-  const profile = getProfile() || getDemoProfile();
+  if (profileForm) {
+    const profile = getProfile() || getDemoProfile();
 
   profileForm.querySelectorAll('[name]').forEach(field => {
     if (field.type !== 'file' && profile[field.name] !== undefined) field.value = profile[field.name];
@@ -110,11 +111,11 @@
     const file = profileImage && profileImage.files[0];
     delete updatedProfile.profile_image;
     if (file) {
-      if (file.size > 2 * 1024 * 1024) {
+      if (file.size <= 2 * 1024 * 1024) {
+        updatedProfile.image = await readFile(file);
+      } else {
         window.alert('A imagem deve ter no máximo 2 MB.');
-        return;
       }
-      updatedProfile.image = await readFile(file);
     }
     saveProfile(updatedProfile);
     if (avatar && updatedProfile.image) avatar.src = updatedProfile.image;
@@ -124,4 +125,5 @@
       status.className = 'profile-status text-success';
     }
   });
+  }
 })();
